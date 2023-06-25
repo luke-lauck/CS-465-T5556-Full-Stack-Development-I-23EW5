@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Trip } from '../models/trip';
 import { TripDataService } from '../services/trip-data.service';
 import { Location } from '@angular/common';
+import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-trip-card',
@@ -16,12 +17,18 @@ export class TripCardComponent implements OnInit {
   constructor(
     private router : Router,
     private tripService: TripDataService,
-    private location: Location
+    private location: Location,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
-
+    return this.authenticationService.isLoggedIn();
   }
+
+  public isLoggedIn(): boolean {
+    return this.authenticationService.isLoggedIn();
+  }
+   
 
   private deleteTrip(trip: Trip): void {
     const currentUrl = this.router.url;
