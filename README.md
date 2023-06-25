@@ -1,7 +1,9 @@
 # CS-465-T5556-Full-Stack-Development-I-23EW5
 CS-465 Full Stack Development with MEAN
+
 # Architecture
 Compare and contrast the types of frontend development you used in your full stack project, including Express HTML, JavaScript, and the single-page application (SPA). Why did the backend use a NoSQL MongoDB database?
+
 Express HTML uses server-side logic to provide rendering to the front-end user interface.  It is simple to understand and easy to implement.  Angular dynamically updates the page and comes with much more complexity.
 The backend used MongoDB since it is easy to implement and good at keeping a large number of unstructured data.  Any alternative would have worked as well but may have different cons.
 
